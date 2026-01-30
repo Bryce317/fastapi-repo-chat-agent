@@ -2,7 +2,7 @@
 
 A production-ready multi-agent system that answers questions about the FastAPI codebase using the Model Context Protocol (MCP), LangGraph orchestration, Neo4j knowledge graph, and OpenAI's ChatGPT API.
 
-## 🎯 Overview
+## Overview
 
 This system implements a sophisticated multi-agent architecture where specialized agents collaborate to provide comprehensive answers about the FastAPI repository:
 
@@ -11,7 +11,7 @@ This system implements a sophisticated multi-agent architecture where specialize
 - **Code Analyst Agent**: Performs deep code analysis and generates LLM-powered explanations
 - **Orchestrator Agent**: Coordinates agents using LangGraph and synthesizes responses
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 User Query
@@ -28,7 +28,7 @@ Response Synthesis (OpenAI)
 User Response
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -83,7 +83,7 @@ python -m gateway.main
 
 The API will be available at http://localhost:8000
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Chat
 
@@ -165,7 +165,7 @@ ws.send(JSON.stringify({
 }));
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Example Queries
 
@@ -229,7 +229,7 @@ fastapi-repo-chat-agent/
 └── utils/               # Utilities
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Key configuration options in `.env`:
 
@@ -263,7 +263,7 @@ AGENT_MAX_RETRIES=3
 MAX_CONVERSATION_HISTORY=20
 ```
 
-## 🎨 Features
+## Features
 
 ### Multi-Agent Coordination
 - **LangGraph** workflow for intelligent agent routing
@@ -325,7 +325,7 @@ Response:
 }
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Neo4j Connection Failed
 
@@ -352,7 +352,7 @@ docker-compose restart neo4j
 - Check network connectivity for git clone
 - Review logs for parsing errors
 
-## 📝 Development
+## Development
 
 ### Adding a New Agent
 
@@ -367,24 +367,4 @@ docker-compose restart neo4j
 2. Update parser in `agents/indexer/parser.py`
 3. Add schema constraints in `database/schema.py`
 
-## 🔒 Security Notes
-
-- **API Keys**: Never commit `.env` file
-- **Neo4j**: Use strong passwords in production
-- **CORS**: Restrict origins in production (update `gateway/main.py`)
-- **Query Validation**: Cypher queries are validated for dangerous operations
-
-## 📄 License
-
-This project is for educational and demonstration purposes.
-
-## 🙏 Acknowledgments
-
-- **FastAPI**: https://github.com/tiangolo/fastapi
-- **LangGraph**: Agent orchestration framework
-- **Neo4j**: Graph database
-- **OpenAI**: LLM API
-
 ---
-
-**Built with ❤️ using FastAPI, LangGraph, Neo4j, and OpenAI**
